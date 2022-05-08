@@ -4,6 +4,10 @@
     flex: 1 1 auto;
 }
 
+* {
+    cursor: inherit;
+}
+
 // .mat-toolbar.mat-primary {
 //     // background-image: linear-gradient(to right bottom, #000000, #382425, #6c453d, #a06c4f, #cc9a5f, #dcb26c, #e9cc7b, #f5e68c, #f5e999, #f5eca6, #f5efb3, #f6f2c0);
 //     background-image: linear-gradient(to right bottom, #000000, #492f2e, #8f5e4a, #cc9a5f, #f6e27a);

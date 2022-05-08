@@ -20,8 +20,14 @@ export class AppComponent extends FormComponent implements OnInit {
 
   @ViewChild(TableComponent) table: TableComponent;
   displayPrevStyle = true;
-  cursor = ['url(../assets/ace.png), auto', 'url(../assets/heart.png), auto', 'url(../assets/cloud.png), auto', 'url(../assets/diamond.png), auto']
+  cursor = ['url(../assets/ace.png), auto !important', 'url(../assets/heart.png), auto !important', 'url(../assets/cloud.png), auto !important', 'url(../assets/diamond.png), auto !important']
   cursorSelected: any;
+  contacts: any = {
+    facebook: 'https://www.facebook.com/tan.songming.9/',
+    email: 'mailto:97songming@gmail.com',
+    'assets/linkedin.png': 'https://www.linkedin.com/in/tan-song-ming-b4b6371a6/',
+    'assets/resume.png': 'https://drive.google.com/file/d/18QNO9UB3pyD3gXkr3pQlXitwykeR4ler/view?usp=sharing',
+  }
 
   override ngOnInit(): void {
     super.ngOnInit();
@@ -139,7 +145,7 @@ export class AppComponent extends FormComponent implements OnInit {
         style: 'icon',
         value: 'facebook',
         color: 'white',
-        tooltip: 'facebook'
+        tooltip: 'https://www.facebook.com/tan.songming.9/'
       },
       {
         type: 'button',
@@ -170,7 +176,7 @@ export class AppComponent extends FormComponent implements OnInit {
         value: 'assets/linkedin.png',
         color: 'white',
         height: '20px',
-        tooltip: '+65 8852 2639'
+        tooltip: 'https://www.linkedin.com/in/tan-song-ming-b4b6371a6/'
       },
       {
         type: 'button',
@@ -222,6 +228,7 @@ export class AppComponent extends FormComponent implements OnInit {
   }
 
   toolbarAction(event: any) {
+    window.open(this.contacts[event], "_blank");
     console.log(event);
   }
 
