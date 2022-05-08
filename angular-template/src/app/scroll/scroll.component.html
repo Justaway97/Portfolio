@@ -1,0 +1,5 @@
+<div class="scroll">
+    <ng-container *ngFor="let d of data;let i = index">
+        <app-button [color]="d.color" [text]="i" [tooltip]="d.tooltip" (onClick)="scrollToId(d)"></app-button>
+    </ng-container>
+</div>

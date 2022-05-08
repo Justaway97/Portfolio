@@ -1,0 +1,21 @@
+@import "styles";
+
+div {
+    width: 100%;
+    height: 100%;
+}
+
+.image {
+    animation: image 1.5s ease-in-out infinite;
+    animation-delay: 3s;
+}
+
+@keyframes image {
+    from {
+        box-shadow: 0 0 10px black, 0 0 20px #462523, 0 0 30px #cb9b51, 0 0 40px #f6e27a, 0 0 50px #f6f2c0, 0 0 60px #f6e27a, 0 0 70px #cb9b51, 0 0 80px black;
+    }
+
+    to {
+        box-shadow: 0 0 20px black, 0 0 30px #cb9b51, 0 0 40px #f6e27a, 0 0 50px #f6f2c0, 0 0 60px #f6e27a, 0 0 70px #cb9b51, 0 0 80px #462523, 0 0 90px black;
+    }
+}

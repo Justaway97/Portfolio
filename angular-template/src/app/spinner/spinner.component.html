@@ -1,0 +1,8 @@
+<ng-container *ngIf="startWithAnimation">
+    <div>
+        <!-- <img class="image" [src]="url" [style]="styles" [@spinner]="spinnerClick ? 'zoom-in' : 'zoom-out'"
+            (click)="click()"> -->
+        <img class="image" [src]="url" [style]="styles" [@spinner]="spinnerClick ? 'bright-in' : 'bright-out'"
+            (click)="click()">
+    </div>
+</ng-container>

@@ -1,0 +1,16 @@
+<ng-container *ngIf="startWithAnimation">
+    <button class="onPoint" [@fadeIn]="animate('fade-in','fade')" [@glow]="animate('glow','glow-in')" mat-icon-button
+        [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <ng-container *ngFor="let opt of options; let j = index">
+            <button mat-menu-item (click)="actionSelected(j, opt)">
+                <ng-container *ngIf="opt.icon">
+                    <mat-icon>{{ opt.icon }}</mat-icon>
+                </ng-container>
+                <span>{{ opt.text }}</span>
+            </button>
+        </ng-container>
+    </mat-menu>
+</ng-container>

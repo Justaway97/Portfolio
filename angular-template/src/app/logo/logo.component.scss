@@ -1,0 +1,94 @@
+.image-s {
+    clip-path: path('M33.7 6.7V1L32.1 1.1L31.3 3.2L30.2 3.8L28.5 4.2L24.8 2.1H22.5L21.1 1.2L20 2.1L18.3 1.2H14.2L11.5 2.1H10.8L8.6 2.9L6.6 4.6L4.5 6L2.6 8.9L2.9 9.7L1.8 10.2L1 13.8L1.5 17.3L2.2 21.2L4.5 23.7L7.1 26.1L11.5 28.6L16.7 31.8H17.6L19.4 33.2L23 34.8L23.6 35.5L26.1 37L27.8 38.7L29.9 43V47L26.7 51.3L24.8 52.4L21.1 53.8L16.7 53.4L12.2 52.4L6.6 48.1L5 45.5V44.8L3.9 42.4L2.9 38.3L1.5 38.7L1.8 43.6L2.2 44.8L1.8 45.5V48.1L2.2 51.7L1.5 56V56.9H3.1L3.4 55.2L3.9 54.2L5 53.4H7.1L8.6 54.6L11.5 55.2L17.6 56.5H21.3L25.6 56L29.2 54.2L30.7 53.4L34.6 50L35.1 48.4L37 45.5V43.6V39.8L35.9 36.5L33.7 32.6L30.7 30.1L28.5 29.3L25.6 26.9L18.3 23.2L13.8 20.6L9 17.3L7.6 14.8V11.5L9 8.6L9.9 6.7L11.5 6L15.1 4.2H17.6L21.8 5.1L27.8 7.9L29.2 9.7L30.7 13.8L31.7 18.2H33.7V12.8L32.9 11.5L33.7 9.7L32.9 8.6L33.7 6.7Z');
+    // animation: image 1.5s ease-in-out infinite;
+    // animation-delay: 3s;
+}
+
+img {
+    position: fixed;
+}
+
+body {
+    font-family: cursive;
+}
+
+.glow {
+    position: fixed;
+    font-size: 75px;
+    color: transparent;
+    text-align: center;
+    text-shadow:
+        0 3px 20px red,
+        0 0 20px red,
+        0 0 10px orange,
+        4px -5px 6px yellow,
+        -4px -10px 10px yellow,
+        0 -10px 30px yellow;
+    animation: 2s glow infinite alternate linear;
+}
+
+@keyframes glow {
+
+    0% {
+        text-shadow: 0 3px 20px red, 0 0 20px red,
+            0 0 10px orange,
+            0 0 0 yellow,
+            0 0 5px yellow,
+            -2px -5px 5px yellow,
+            4px -10px 10px yellow;
+    }
+
+    25% {
+        text-shadow: 0 3px 20px red, 0 0 30px red,
+            0 0 20px orange,
+            0 0 5px yellow,
+            -2px -5px 5px yellow,
+            3px -10px 10px yellow,
+            -4px -15px 20px yellow;
+    }
+
+    50% {
+        text-shadow: 0 3px 20px red, 0 0 20px red,
+            0 -5px 10px orange,
+            -2px -5px 5px yellow,
+            3px -10px 10px yellow,
+            -4px -15px 20px yellow,
+            2px -20px 30px rgba(255, 255, 0, 0.5);
+    }
+
+    75% {
+        text-shadow: 0 3px 20px red, 0 0 20px red,
+            0 -5px 10px orange,
+            3px -5px 5px yellow,
+            -4px -10px 10px yellow,
+            2px -20px 30px rgba(255, 255, 0, 0.5),
+            0px -25px 40px rgba(255, 255, 0, 0)
+    }
+
+    100% {
+        text-shadow: 0 3px 20px red, 0 0 20px red,
+            0 0 10px orange,
+            0 0 0 yellow,
+            0 0 5px yellow,
+            -2px -5px 5px yellow,
+            4px -10px 10px yellow;
+    }
+}
+
+// .image1 {
+//     left: 20%;
+//     // clip-path: path('M33.7 6.7V1L32.1 1.1L31.3 3.2L30.2 3.8L28.5 4.2L24.8 2.1H22.5L21.1 1.2L20 2.1L18.3 1.2H14.2L11.5 2.1H10.8L8.6 2.9L6.6 4.6L4.5 6L2.6 8.9L2.9 9.7L1.8 10.2L1 13.8L1.5 17.3L2.2 21.2L4.5 23.7L7.1 26.1L11.5 28.6L16.7 31.8H17.6L19.4 33.2L23 34.8L23.6 35.5L26.1 37L27.8 38.7L29.9 43V47L26.7 51.3L24.8 52.4L21.1 53.8L16.7 53.4L12.2 52.4L6.6 48.1L5 45.5V44.8L3.9 42.4L2.9 38.3L1.5 38.7L1.8 43.6L2.2 44.8L1.8 45.5V48.1L2.2 51.7L1.5 56V56.9H3.1L3.4 55.2L3.9 54.2L5 53.4H7.1L8.6 54.6L11.5 55.2L17.6 56.5H21.3L25.6 56L29.2 54.2L30.7 53.4L34.6 50L35.1 48.4L37 45.5V43.6V39.8L35.9 36.5L33.7 32.6L30.7 30.1L28.5 29.3L25.6 26.9L18.3 23.2L13.8 20.6L9 17.3L7.6 14.8V11.5L9 8.6L9.9 6.7L11.5 6L15.1 4.2H17.6L21.8 5.1L27.8 7.9L29.2 9.7L30.7 13.8L31.7 18.2H33.7V12.8L32.9 11.5L33.7 9.7L32.9 8.6L33.7 6.7Z');
+//     animation: image 1.5s ease-in-out infinite;
+//     animation-delay: 3s;
+//     position: absolute;
+// }
+
+// @keyframes image {
+//     from {
+//         box-shadow: 0 0 10px black, 0 0 20px #462523, 0 0 30px #cb9b51, 0 0 40px #f6e27a, 0 0 50px #f6f2c0, 0 0 60px #f6e27a, 0 0 70px #cb9b51, 0 0 80px black;
+//     }
+
+//     to {
+//         box-shadow: 0 0 20px black, 0 0 30px #cb9b51, 0 0 40px #f6e27a, 0 0 50px #f6f2c0, 0 0 60px #f6e27a, 0 0 70px #cb9b51, 0 0 80px #462523, 0 0 90px black;
+//     }
+// }

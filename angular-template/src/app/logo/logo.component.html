@@ -1,0 +1,9 @@
+<ng-container>
+
+    <!-- <img class="image" [src]="url" [style]="styles" [@spinner]="spinnerClick ? 'zoom-in' : 'zoom-out'"
+            (click)="click()"> -->
+    <h1 ngClass="glow" [style]="textStyles">{{ text }}</h1>
+    <img [ngClass]="getClassName('image-')" [src]="url" [style]="styles">
+    <!-- <img class="image1" [src]="url" [style]="styles"> -->
+
+</ng-container>

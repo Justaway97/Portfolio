@@ -1,0 +1,28 @@
+@import "styles";
+
+table {
+    width: 100%;
+}
+
+.action {
+    width: 1px;
+}
+
+tr.example-detail-row {
+    height: 0;
+}
+
+.example-element-detail {
+    overflow: hidden;
+    display: flex;
+}
+
+.example-element-description {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.rightAlign {
+    display: flex;
+    justify-content: flex-end;
+}

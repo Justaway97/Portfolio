@@ -1,0 +1,29 @@
+<div class="main">
+    <ng-container *ngFor="let text of texts;let i = index">
+        <ng-container *ngIf="i !== 1">
+            <div class="text">
+                <ng-container *ngFor="let t of text">
+                    <ng-container *ngIf="t === ' '">
+                        <h1 class="space"></h1>
+                    </ng-container>
+                    <ng-container *ngIf="t !== ' '">
+                        <h1>{{ t }}</h1>
+                    </ng-container>
+                </ng-container>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="i === 1">
+            <div class="name">
+                <ng-container *ngFor="let t of text">
+                    <ng-container *ngIf="t === ' '">
+                        <h1 class="space"></h1>
+                    </ng-container>
+                    <ng-container *ngIf="t !== ' '">
+                        <h1 class="nameH1">{{ t }}</h1>
+                    </ng-container>
+                </ng-container>
+            </div>
+        </ng-container>
+    </ng-container>
+    <span class="cornerText">ABOUT ME</span>
+</div>

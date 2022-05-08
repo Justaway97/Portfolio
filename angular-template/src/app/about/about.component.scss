@@ -1,0 +1,75 @@
+h1 {
+    font-family: Garamond, serif;
+    font-size: 5rem;
+    z-index: 10;
+    color: white;
+}
+
+.name {
+    display: flex;
+    margin-left: 3%;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 10%;
+    justify-content: center;
+    gap: 10%;
+}
+
+img {
+    height: 100%;
+}
+
+.image {
+    display: flex;
+    flex-direction: row;
+    height: 18%;
+    padding-left: 3%;
+}
+
+.text {
+    display: flex;
+    margin-left: 3%;
+}
+
+.space {
+    padding-left: 2%;
+}
+
+.nameH1 {
+    font-size: 8rem;
+}
+
+h1:hover {
+    color: #fff;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
+    transition: 0.3s;
+}
+
+.cornerText {
+    position: absolute;
+    right: 1%;
+    font-size: 3rem;
+    bottom: 3%;
+    color: rgb(255, 255, 0);
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px gold,
+        0 0 82px gold,
+        0 0 92px gold,
+        0 0 102px gold,
+        0 0 151px gold;
+}

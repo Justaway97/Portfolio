@@ -1,0 +1,10 @@
+<ng-container *ngIf="startWithAnimation">
+    <label>{{ label }}</label>
+    <mat-radio-group [ngClass]="layout === 'row' ? 'row' : 'column'" [(ngModel)]="value"
+        (ngModelChange)="valueChanged($event)">
+        <mat-radio-button class="onPoint" [@fadeIn]="animate('fade-in','fade')" [@glow]="animate('glow','glow-in')"
+            *ngFor="let opt of options" [value]="opt.key" [ngClass]="layout === 'row' ? 'radio-row' : 'radio-column'">
+            {{ opt.value }}
+        </mat-radio-button>
+    </mat-radio-group>
+</ng-container>

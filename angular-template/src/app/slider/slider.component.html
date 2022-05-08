@@ -1,0 +1,9 @@
+<ng-container *ngIf="startWithAnimation">
+    <div>
+        <label id="example-name-label" class="example-name-label">Max Value</label>
+        <label class="example-value-label">{{value}}</label>
+    </div>
+    <mat-slider class="onPoint" [@fadeIn]="animate('fade-in','fade')" [@glow]="animate('glow','glow-in')" [max]="max"
+        [min]="min" [step]="step" [thumbLabel]="thumbLabel" [(ngModel)]="value" (ngModelChange)="valueChanged($event)">
+    </mat-slider>
+</ng-container>

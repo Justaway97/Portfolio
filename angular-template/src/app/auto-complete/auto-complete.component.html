@@ -1,0 +1,14 @@
+<mat-form-field class="onPoint" [@fadeIn]="startWithAnimation ? 'fade-in': 'fade'"
+  [@glow]="startWithAnimation ? 'glow' : 'glow-in'">
+  <mat-label>Assignee</mat-label>
+  <input type="text" matInput [formControl]="inputControl" [matAutocomplete]="auto"
+    (ngModelChange)="valueChanged($event)" [placeholder]="placeholder">
+  <ng-container *ngIf="hint">
+    <mat-hint>{{ hint }}</mat-hint>
+  </ng-container>
+  <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+    <mat-option *ngFor="let option of filterOptions | async" [value]="option">
+      {{option.name}}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>

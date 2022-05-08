@@ -1,0 +1,59 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    padding-top: 10%;
+    padding-left: 3%;
+}
+
+.content {
+    // padding: 1%;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.content-text-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.content-text-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+}
+
+img {
+    height: 100%;
+}
+
+.text {
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: justify;
+    background-color: darkslategray;
+    color: white;
+    height: 50%;
+}
+
+.cornerText {
+    position: absolute;
+    right: 1%;
+    font-size: 3rem;
+    bottom: 3%;
+    color: rgb(255, 255, 0);
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px gold,
+        0 0 82px gold,
+        0 0 92px gold,
+        0 0 102px gold,
+        0 0 151px gold;
+}

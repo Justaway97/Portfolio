@@ -1,0 +1,5 @@
+<ng-container *ngIf="startWithAnimation">
+    <mat-paginator [length]="length" showFirstLastButtons [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"
+        (page)="pageChanged($event)" aria-label="Select page">
+    </mat-paginator>
+</ng-container>

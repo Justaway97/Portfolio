@@ -1,0 +1,41 @@
+<ng-container *ngIf="!vertical">
+    <mat-toolbar [color]="color" [@fadeIn]="startWithAnimation ? 'fade-in': 'fade'"
+        [@glow]="startWithAnimation ? 'glow' : 'glow-in'">
+        <ng-container *ngIf="left">
+            <ng-container *ngFor="let l of left">
+                <ng-container *ngIf="l.type === 'button'">
+                    <app-button [text]="l.value" [buttonType]="l.style" (onClick)="onClick($event)"></app-button>
+                </ng-container>
+                <ng-container *ngIf="l.type === 'text'">
+                    <mat-label>{{ l.value }}</mat-label>
+                </ng-container>
+            </ng-container>
+        </ng-container>
+        <span class="example-spacer"></span>
+        <ng-container *ngIf="right">
+            <ng-container *ngFor="let r of right">
+                <ng-container *ngIf="r.type === 'button'">
+                    <app-button [text]="r.value" [buttonType]="r.style" (onClick)="onClick($event)"></app-button>
+                </ng-container>
+                <ng-container *ngIf="r.type === 'text'">
+                    <mat-label>{{ r.value }}</mat-label>
+                </ng-container>
+            </ng-container>
+        </ng-container>
+    </mat-toolbar>
+</ng-container>
+<ng-container *ngIf="vertical">
+    <div class="sidenav" [@fadeIn]="startWithAnimation ? 'fade-in': 'fade'"
+        [@glow]="startWithAnimation ? 'glow' : 'glow-in'">
+        <ng-container *ngFor="let l of list">
+            <ng-container *ngIf="l.type === 'button'">
+                <app-button class="sidenav-content" [height]="l.height" [rotate]="rotate ? 90 : 0" [text]="l.value"
+                    [color]="l.color" [buttonType]="l.style" (onClick)="onClick($event)">
+                </app-button>
+            </ng-container>
+            <ng-container *ngIf="l.type === 'text'">
+                <mat-label class="sidenav-content">{{ l.value }}</mat-label>
+            </ng-container>
+        </ng-container>
+    </div>
+</ng-container>

@@ -1,0 +1,28 @@
+@import "styles";
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+// .mat-toolbar.mat-primary {
+//     // background-image: linear-gradient(to right bottom, #000000, #382425, #6c453d, #a06c4f, #cc9a5f, #dcb26c, #e9cc7b, #f5e68c, #f5e999, #f5eca6, #f5efb3, #f6f2c0);
+//     background-image: linear-gradient(to right bottom, #000000, #492f2e, #8f5e4a, #cc9a5f, #f6e27a);
+// }
+
+.sidenav {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    padding-top: 2%;
+    right: 5%;
+    background: none;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5%;
+}
+
+.sidenav-content {
+    display: flex;
+    align-self: center;
+}

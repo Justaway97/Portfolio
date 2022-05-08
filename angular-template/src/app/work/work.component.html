@@ -1,0 +1,25 @@
+<div class="main">
+    <span class="cornerText">PROJECT AND EXERCISE</span>
+    <ng-container *ngFor="let c of content;let i = index">
+        <ng-container *ngIf="i % 2 == 0">
+            <div class="content">
+                <img [src]="url[i]">
+                <div class="content-text-left">
+                    <h1 class="text">
+                        {{ c }}
+                    </h1>
+                </div>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="i % 2 != 0">
+            <div class="content">
+                <div class="content-text-right">
+                    <h1 class="text">
+                        {{ c }}
+                    </h1>
+                </div>
+                <img [src]="url[i]">
+            </div>
+        </ng-container>
+    </ng-container>
+</div>

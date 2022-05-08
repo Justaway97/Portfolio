@@ -1,0 +1,13 @@
+// expand and shake effect
+.onPoint {
+    transition: transform .5s
+}
+
+.onPoint:hover {
+    transform: scale(1.2);
+}
+
+//cursor set to inherit
+// * {
+//     cursor: inherit;
+// }

@@ -1,0 +1,11 @@
+<mat-form-field class="onPoint" [@fadeIn]="animate('fade-in','fade')" [@glow]="animate('glow','glow-in')">
+    <ng-container *ngIf="label">
+        <mat-label>{{ label }}</mat-label>
+    </ng-container>
+    <input matInput [(ngModel)]="value" [matDatepicker]="picker" (ngModelChange)="valueChanged($event)">
+    <ng-container *ngIf="hint">
+        <mat-hint>{{ hint }}</mat-hint>
+    </ng-container>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>

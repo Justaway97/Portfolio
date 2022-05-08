@@ -1,0 +1,18 @@
+<div>
+    <ng-container *ngIf="data.title">
+        <h1 mat-dialog-title>{{ data.title }}</h1>
+    </ng-container>
+    <ng-container *ngIf="data.content">
+        <div mat-dialog-content>
+            {{ data.content }}
+        </div>
+    </ng-container>
+</div>
+<ng-container *ngIf="data.action">
+    <mat-dialog-actions align="end">
+        <ng-container *ngIf="data.action.length > 1">
+            <button mat-button [mat-dialog-close]="false">{{ data.action[0] }}</button>
+        </ng-container>
+        <button mat-button [mat-dialog-close]="true">{{ data.action[data.action.length-1] }}</button>
+    </mat-dialog-actions>
+</ng-container>

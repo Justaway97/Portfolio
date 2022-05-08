@@ -1,0 +1,7 @@
+<mat-button-toggle-group name="fontStyle" aria-label="Font Style" [ngModel]="value"
+    (ngModelChange)="valueChanged($event)" class="onPoint" [@fadeIn]="animate('fade-in','fade')"
+    [@glow]="animate('glow','glow-in')">
+    <ng-container *ngFor="let opt of options">
+        <mat-button-toggle style="cursor: inherit;" [value]="opt.key">{{ opt.value }}</mat-button-toggle>
+    </ng-container>
+</mat-button-toggle-group>

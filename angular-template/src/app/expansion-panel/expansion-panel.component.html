@@ -1,0 +1,19 @@
+<mat-accordion>
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" [hideToggle]="hideToggle">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <ng-container *ngIf="title">
+                    <span>{{ title}}</span>
+                </ng-container>
+                <mat-panel-description>
+                    <ng-container *ngIf="title">
+                        <span>{{ content }}</span>
+                    </ng-container>
+                </mat-panel-description>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <ng-container *ngIf="expand">
+            <p>{{ expand }}</p>
+        </ng-container>
+    </mat-expansion-panel>
+</mat-accordion>

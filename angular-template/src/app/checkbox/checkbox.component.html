@@ -1,0 +1,14 @@
+<div>
+    <span class="onPoint" [@fadeIn]="animate('fade-in','fade')" [@glow]="animate('glow','glow-in')">
+        {{ placeholder }}
+    </span>
+    <div [ngClass]="layout === 'row' ? 'row' : 'column'" class="onPoint" [@fadeIn]="animate('fade-in','fade')"
+        [@glow]="animate('glow','glow-in')">
+        <ng-container *ngFor="let opt of options">
+            <mat-checkbox [ngClass]="layout === 'row' ? 'checkbox-row' : 'checkbox-column'" [checked]="opt.check"
+                (change)="valueChanged($event, opt)">
+                {{ opt.value }}
+            </mat-checkbox>
+        </ng-container>
+    </div>
+</div>

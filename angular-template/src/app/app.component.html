@@ -1,0 +1,91 @@
+<form [formGroup]="form">
+  <canvas id="canvas" [style]="{'cursor': cursorSelected? cursorSelected : cursor[0]}"></canvas>
+  <app-logo text="S" [imageSize]="7" [left]="3" style="background: none;z-index: 10"></app-logo>
+  <app-logo text="O" [imageSize]="7" [left]="9" url="/assets/logo-o.png" style=" background: none;z-index: 10">
+  </app-logo>
+  <app-logo text="N" [imageSize]="7" [left]="16" url="/assets/logo-n.png" style=" background: none;z-index: 10">
+  </app-logo>
+  <app-logo text="G" [imageSize]="7" [left]="24" url="/assets/logo-g.png" style=" background: none;z-index: 10">
+  </app-logo>
+  <app-logo text="M" [imageSize]="7" [left]="32" url="/assets/logo-m.png" style=" background: none;z-index: 10">
+  </app-logo>
+  <app-logo text="I" [imageSize]="7" [left]="41" url="/assets/logo-i.png" style=" background: none;z-index: 10">
+  </app-logo>
+  <app-logo text="N" [imageSize]="7" [left]="44" url="/assets/logo-n.png" style=" background: none;z-index: 10">
+  </app-logo>
+  <app-logo text="G" [imageSize]="7" [left]="51" url="/assets/logo-g.png" style=" background: none;z-index: 10">
+  </app-logo>
+  <!-- <app-logo text="S" style="background: none;"></app-logo> -->
+  <div class="prev" [ngStyle]="{'display': displayPrevStyle ? 'flex' : 'none'}">
+    <app-spinner [url]="spinnerSrc" (onClick)="spinnerClick()" [height]="spinnerHeight" [width]="spinnerWidth">
+    </app-spinner>
+  </div>
+  <div class="main"
+    [ngStyle]="{'display': displayPrevStyle ? 'none' : 'flex', 'cursor': cursorSelected? cursorSelected : 'inherit'}">
+    <!-- <div class="main"> -->
+
+    <app-toolbar [left]="toolbar.left" [startWithAnimation]="!displayPrevStyle" [right]="toolbar.right"
+      (action)="toolbarAction($event)" [list]="toolbarList" [vertical]="true"></app-toolbar>
+    <app-scroll [data]="scrollData" (click)="onScrollClick($event)"></app-scroll>
+    <app-about id="about" class="about">
+      <!-- <h1>
+        Hi I am
+      </h1>
+      <br>
+      <br>
+      <br>
+      <h1 class="name">
+        Song Ming
+      </h1>
+      <br>
+      <br>
+      <br>
+      <h1>
+        A Full Stack Web Developer
+      </h1> -->
+    </app-about>
+    <app-skill id="skill" class="skill"></app-skill>
+    <app-work id="work" class="work" [url]="urlWork"></app-work>
+    <!-- <app-auto-complete [formControl]="$any(form.controls['autoCompleteControl'])"
+      [startWithAnimation]="!displayPrevStyle" placeholder="testing" [options]="options" [required]="true"
+      [disabled]="true" (change)="autoCompleteChange($event)">
+    </app-auto-complete>
+    <app-button-toggle [disabled]="true" [startWithAnimation]="!displayPrevStyle" [required]="true"
+      [formControl]="$any(form.controls['buttonToggleControl'])" [options]="values">
+    </app-button-toggle>
+    <app-checkbox [formControl]="$any(form.controls['checkboxControl'])" [options]="checkbox"
+      placeholder="test checkbox" [startWithAnimation]="!displayPrevStyle">
+    </app-checkbox>
+    <app-input [formControl]="$any(form.controls['inputControl'])" [startWithAnimation]="!displayPrevStyle"
+      [required]="true" label="testing input">
+    </app-input>
+    <app-button text="test-button" [startWithAnimation]="!displayPrevStyle"></app-button>
+    <app-date-picker [formControl]="$any(form.controls['datePickerControl'])" [startWithAnimation]="!displayPrevStyle"
+      [required]="true"></app-date-picker>
+    <button mat-button (click)="openDialog()">Launch dialog</button>
+    <app-expansion-panel title="test expansion title" content="test expansion content" expand="test expansion content">
+    </app-expansion-panel>
+    <app-menu [options]="menu" [startWithAnimation]="!displayPrevStyle" (action)="menuAction($event)"></app-menu>
+    <app-paginator (pageChange)="pageChange($event)"></app-paginator>
+    <app-radio-button [formControl]="$any(form.controls['radioButtonControl'])" [startWithAnimation]="!displayPrevStyle"
+      [required]="true" label="testing radio" [options]="radio">
+    </app-radio-button>
+    <app-select [formControl]="$any(form.controls['selectControl'])" [startWithAnimation]="!displayPrevStyle"
+      [required]="true" label="testing select" [options]="select">
+    </app-select>
+    <app-slider [formControl]="$any(form.controls['sliderControl'])" [required]="true" [max]="max" [min]="min">
+    </app-slider>
+    <app-table [displaySelect]="tableDisplayAction" [data]="tableData" [setting]="tableSetting" [action]="tableAction"
+      [requiredSelect]="true" (page)="pageChange($event)" [button]="tableButton"
+      (buttonClick)="tableButtonClick($event)" [startWithAnimation]="!displayPrevStyle">
+    </app-table>
+    <button type="submit" class="btn btn-primary">
+      Submit
+    </button> -->
+  </div>
+</form>
+
+
+<!-- <div class="example-box" cdkDrag>
+      Drag me around
+    </div> -->
