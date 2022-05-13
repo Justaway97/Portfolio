@@ -4,18 +4,18 @@
             <div class="content">
                 <img [src]="url[i]">
                 <div class="content-text-left">
-                    <h1 class="text">
+                    <span class="text">
                         {{ c }}
-                    </h1>
+                    </span>
                 </div>
             </div>
         </ng-container>
         <ng-container *ngIf="i % 2 != 0">
             <div class="content">
                 <div class="content-text-right">
-                    <h1 class="text">
+                    <span class="text">
                         {{ c }}
-                    </h1>
+                    </span>
                 </div>
                 <img [src]="url[i]">
             </div>

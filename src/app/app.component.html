@@ -23,6 +23,11 @@
   <app-logo text="G" [imageSize]="7" [left]="30" url="/assets/logo-g.png"
     style=" background: none;z-index: 10; cursor: inherit;">
   </app-logo>
+  <ng-container *ngIf="!displayPrevStyle">
+    <app-toolbar [left]="toolbar.left" [startWithAnimation]="false" [right]="toolbar.right"
+      (action)="toolbarAction($event)" [list]="toolbarList" [vertical]="true" style="cursor: inherit"></app-toolbar>
+    <app-scroll [data]="scrollData" (click)="onScrollClick($event)"></app-scroll>
+  </ng-container>
   <!-- <app-logo text="S" style="background: none;"></app-logo> -->
   <div class="prev" [style]="{'display': displayPrevStyle ? 'flex' : 'none'}">
     <app-spinner [url]="spinnerSrc" (onClick)="spinnerClick()" [height]="spinnerHeight" [width]="spinnerWidth"
@@ -31,10 +36,6 @@
   </div>
   <div class="main" [style]="{'display': displayPrevStyle ? 'none' : 'flex', 'cursor': 'inherit'}">
     <!-- <div class="main"> -->
-
-    <app-toolbar [left]="toolbar.left" [startWithAnimation]="false" [right]="toolbar.right"
-      (action)="toolbarAction($event)" [list]="toolbarList" [vertical]="true" style="cursor: inherit"></app-toolbar>
-    <app-scroll [data]="scrollData" (click)="onScrollClick($event)"></app-scroll>
     <app-about id="about" class="about" style="cursor: inherit"></app-about>
     <app-skill id="skill" class="skill" style="cursor: inherit"></app-skill>
     <app-work id="work" class="work" [url]="urlWork" style="cursor: inherit"></app-work>
