@@ -1,11 +1,11 @@
 .scroll {
-    width: 5%;
+    // width: 5%;
     position: fixed;
     z-index: 1;
-    right: 0;
+    right: 2%;
     display: flex;
     flex-direction: column;
-    row-gap: 1%;
+    row-gap: min(5vh, 5vw);
     justify-content: center;
     height: 100%;
 }

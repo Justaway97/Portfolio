@@ -17,7 +17,7 @@ export class ButtonComponent extends BaseComponent {
   @Input() buttonType: any;
   @Input() text: any;
   @Input() rotate = 0;
-  @Input() height = '20px';
+  @Input() height = 'min(3vh, 3vw)';
   @Input() tooltip: any;
 
   @Output() onClick = new EventEmitter();

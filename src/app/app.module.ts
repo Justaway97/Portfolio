@@ -64,6 +64,7 @@ import { LogoComponent } from './logo/logo.component';
 import { AboutComponent } from './about/about.component';
 import { SkillComponent } from './skill/skill.component';
 import { WorkComponent } from './work/work.component';
+import { CornerTextComponent } from './corner-text/corner-text.component';
 
 @NgModule({
   declarations: [
@@ -91,6 +92,7 @@ import { WorkComponent } from './work/work.component';
     AboutComponent,
     SkillComponent,
     WorkComponent,
+    CornerTextComponent,
   ],
   imports: [
     BrowserAnimationsModule,

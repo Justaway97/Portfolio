@@ -1,8 +1,8 @@
 .skill {
     display: flex;
-    padding-top: 13%;
+    margin-top: 13%;
     flex-direction: column;
-    padding-bottom: 5%;
+    margin-bottom: 5%;
     overflow-y: scroll;
     gap: 10%;
     width: 50%;
@@ -32,7 +32,7 @@ img {
 
 .content {
     display: flex;
-    font-size: 3rem;
+    font-size: min(5vh, 5vw);
     text-align: left;
     font-weight: bold;
 }
@@ -42,7 +42,7 @@ img {
     flex-direction: row;
     justify-content: center;
     width: 50%;
-    font-size: 1rem;
+    font-size: min(2vw, 2vh);
     animation: description 1.5s ease-in-out;
 }
 
@@ -103,21 +103,4 @@ img {
     margin-right: 5%;
     border-radius: 3%;
     text-align: justify;
-}
-
-.cornerText {
-    position: absolute;
-    right: 1%;
-    font-size: 3rem;
-    bottom: 3%;
-    color: rgb(255, 255, 0);
-    text-shadow:
-        0 0 7px #fff,
-        0 0 10px #fff,
-        0 0 21px #fff,
-        0 0 42px gold,
-        0 0 82px gold,
-        0 0 92px gold,
-        0 0 102px gold,
-        0 0 151px gold;
 }

@@ -7,3 +7,21 @@
 * {
     cursor: inherit;
 }
+
+.mat-icon {
+    font-size: min(3vh, 3vw);
+}
+
+.mat-icon-button {
+    height: min(3vh, 3vw);
+}
+
+.mat-button {
+    height: min(3vh, 3vw);
+    min-height: min(3vh, 3vw);
+    min-width: 0px;
+}
+
+.text {
+    font-size: min(3vh, 3vw);
+}

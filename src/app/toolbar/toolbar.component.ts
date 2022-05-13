@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { Observable } from 'rxjs';
 import { fadeInAnimation, glowAnimation } from '../animation/animation';
+import { BaseComponent } from '../base/base.component';
 
 @Component({
   selector: 'app-toolbar',
@@ -11,23 +12,19 @@ import { fadeInAnimation, glowAnimation } from '../animation/animation';
     glowAnimation
   ]
 })
-export class ToolbarComponent implements OnInit {
+export class ToolbarComponent extends BaseComponent {
 
   @Input() left: any[];
   @Input() right: any[];
   @Input() color = 'primary';
-  @Input() startWithAnimation = false;
   @Input() list: any[];
   @Input() vertical = false;
   @Input() rotate = false;
 
   @Output() action = new EventEmitter();
 
-
-  constructor() { }
-
-  ngOnInit(): void {
-    console.log(this.startWithAnimation, 'start');
+  constructor() {
+    super();
   }
 
   onClick(event: any) {

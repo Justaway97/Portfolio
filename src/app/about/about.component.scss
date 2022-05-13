@@ -1,8 +1,9 @@
 h1 {
     font-family: Garamond, serif;
-    font-size: 5rem;
+    font-size: min(calc(100vh - 92vh), calc(100vw - 92vw));
     z-index: 10;
     color: white;
+    margin: 0 0 0;
 }
 
 .name {
@@ -16,7 +17,7 @@ h1 {
     height: 100%;
     padding-top: 10%;
     justify-content: center;
-    gap: 10%;
+    // gap: 10%;
 }
 
 img {
@@ -40,7 +41,9 @@ img {
 }
 
 .nameH1 {
-    font-size: 8rem;
+    font-size: min(calc(100vh - 85vh), calc(100vw - 85vw));
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 h1:hover {
@@ -55,21 +58,4 @@ h1:hover {
         0 0 102px #0fa,
         0 0 151px #0fa;
     transition: 0.3s;
-}
-
-.cornerText {
-    position: absolute;
-    right: 1%;
-    font-size: 3rem;
-    bottom: 3%;
-    color: rgb(255, 255, 0);
-    text-shadow:
-        0 0 7px #fff,
-        0 0 10px #fff,
-        0 0 21px #fff,
-        0 0 42px gold,
-        0 0 82px gold,
-        0 0 92px gold,
-        0 0 102px gold,
-        0 0 151px gold;
 }

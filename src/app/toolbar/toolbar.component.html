@@ -25,17 +25,33 @@
     </mat-toolbar>
 </ng-container>
 <ng-container *ngIf="vertical">
-    <div class="sidenav" [@fadeIn]="startWithAnimation ? 'fade-in': 'fade'"
-        [@glow]="startWithAnimation ? 'glow' : 'glow-in'">
-        <ng-container *ngFor="let l of list">
-            <ng-container *ngIf="l.type === 'button'">
-                <app-button class="sidenav-content" [height]="l.height" [rotate]="rotate ? 90 : 0" [text]="l.value"
-                    [color]="l.color" [buttonType]="l.style" (onClick)="onClick($event)" [tooltip]="l.tooltip">
-                </app-button>
+    <ng-container *ngIf="startWithAnimation">
+        <div class="sidenav" [@fadeIn]="startWithAnimation ? 'fade-in': 'fade'"
+            [@glow]="startWithAnimation ? 'glow' : 'glow-in'">
+            <ng-container *ngFor="let l of list">
+                <ng-container *ngIf="l.type === 'button'">
+                    <app-button class="sidenav-content" [height]="l.height" [rotate]="rotate ? 90 : 0" [text]="l.value"
+                        [color]="l.color" [buttonType]="l.style" (onClick)="onClick($event)" [tooltip]="l.tooltip">
+                    </app-button>
+                </ng-container>
+                <ng-container *ngIf="l.type === 'text'">
+                    <mat-label class="sidenav-content">{{ l.value }}</mat-label>
+                </ng-container>
             </ng-container>
-            <ng-container *ngIf="l.type === 'text'">
-                <mat-label class="sidenav-content">{{ l.value }}</mat-label>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="!startWithAnimation">
+        <div class="sidenav">
+            <ng-container *ngFor="let l of list">
+                <ng-container *ngIf="l.type === 'button'">
+                    <app-button class="sidenav-content" [height]="l.height" [rotate]="rotate ? 90 : 0" [text]="l.value"
+                        [color]="l.color" [buttonType]="l.style" (onClick)="onClick($event)" [tooltip]="l.tooltip">
+                    </app-button>
+                </ng-container>
+                <ng-container *ngIf="l.type === 'text'">
+                    <mat-label class="sidenav-content">{{ l.value }}</mat-label>
+                </ng-container>
             </ng-container>
-        </ng-container>
-    </div>
+        </div>
+    </ng-container>
 </ng-container>

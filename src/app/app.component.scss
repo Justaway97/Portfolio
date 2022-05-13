@@ -2,6 +2,7 @@
 
 canvas {
     position: absolute;
+    width: 100%;
     cursor: inherit;
 }
 
@@ -69,6 +70,7 @@ canvas {
 .skill {
     height: 100vh;
     position: relative;
+    min-height: 100%;
 }
 
 .work {
@@ -77,6 +79,6 @@ canvas {
 }
 
 form {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
 }

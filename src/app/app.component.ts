@@ -175,7 +175,7 @@ export class AppComponent extends FormComponent implements OnInit {
         style: 'image',
         value: 'assets/linkedin.png',
         color: 'white',
-        height: '20px',
+        height: 'min(3vh, 3vw)',
         tooltip: 'https://www.linkedin.com/in/tan-song-ming-b4b6371a6/'
       },
       {
@@ -183,7 +183,7 @@ export class AppComponent extends FormComponent implements OnInit {
         style: 'image',
         value: 'assets/resume.png',
         color: 'white',
-        height: '40px',
+        height: 'min(5vh, 5vw)',
         tooltip: 'resume',
       }
     ]
@@ -203,7 +203,7 @@ export class AppComponent extends FormComponent implements OnInit {
     // { color: 'white', id: 'about5' }
   ]
   // work
-  urlWork = ['assets/uhunt.jpeg', 'assets/order.jpeg', 'assets/hat.png'];
+  urlWork = ['assets/uhunt.jpeg', 'assets/order.jpeg', 'assets/angular-material.jpeg'];
 
   openDialog() {
     this.dialog.open(DialogComponent, {

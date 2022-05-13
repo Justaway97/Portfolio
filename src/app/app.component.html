@@ -2,25 +2,25 @@
   [style]="{'cursor': cursorSelected? cursorSelected : 'url(../assets/ace.png), auto !important'}">
   <canvas id="canvas" style="cursor: inherit;"></canvas>
   <app-logo text="S" [imageSize]="7" [left]="3" style="background: none;z-index: 10; cursor: inherit;"></app-logo>
-  <app-logo text="O" [imageSize]="7" [left]="9" url="/assets/logo-o.png"
+  <app-logo text="O" [imageSize]="7" [left]="6" url="/assets/logo-o.png"
     style=" background: none;z-index: 10; cursor: inherit;">
   </app-logo>
-  <app-logo text="N" [imageSize]="7" [left]="16" url="/assets/logo-n.png"
+  <app-logo text="N" [imageSize]="7" [left]="10" url="/assets/logo-n.png"
     style=" background: none;z-index: 10; cursor: inherit;">
   </app-logo>
-  <app-logo text="G" [imageSize]="7" [left]="24" url="/assets/logo-g.png"
+  <app-logo text="G" [imageSize]="7" [left]="14.5" url="/assets/logo-g.png"
     style=" background: none;z-index: 10; cursor: inherit;">
   </app-logo>
-  <app-logo text="M" [imageSize]="7" [left]="32" url="/assets/logo-m.png"
+  <app-logo text="M" [imageSize]="7" [left]="20" url="/assets/logo-m.png"
     style=" background: none;z-index: 10; cursor: inherit;">
   </app-logo>
-  <app-logo text="I" [imageSize]="7" [left]="41" url="/assets/logo-i.png"
+  <app-logo text="I" [imageSize]="7" [left]="25" url="/assets/logo-i.png"
     style=" background: none;z-index: 10; cursor: inherit;">
   </app-logo>
-  <app-logo text="N" [imageSize]="7" [left]="44" url="/assets/logo-n.png"
+  <app-logo text="N" [imageSize]="7" [left]="26" url="/assets/logo-n.png"
     style=" background: none;z-index: 10; cursor: inherit;">
   </app-logo>
-  <app-logo text="G" [imageSize]="7" [left]="51" url="/assets/logo-g.png"
+  <app-logo text="G" [imageSize]="7" [left]="30" url="/assets/logo-g.png"
     style=" background: none;z-index: 10; cursor: inherit;">
   </app-logo>
   <!-- <app-logo text="S" style="background: none;"></app-logo> -->
@@ -32,26 +32,10 @@
   <div class="main" [style]="{'display': displayPrevStyle ? 'none' : 'flex', 'cursor': 'inherit'}">
     <!-- <div class="main"> -->
 
-    <app-toolbar [left]="toolbar.left" [startWithAnimation]="!displayPrevStyle" [right]="toolbar.right"
+    <app-toolbar [left]="toolbar.left" [startWithAnimation]="false" [right]="toolbar.right"
       (action)="toolbarAction($event)" [list]="toolbarList" [vertical]="true" style="cursor: inherit"></app-toolbar>
     <app-scroll [data]="scrollData" (click)="onScrollClick($event)"></app-scroll>
-    <app-about id="about" class="about" style="cursor: inherit">
-      <!-- <h1>
-        Hi I am
-      </h1>
-      <br>
-      <br>
-      <br>
-      <h1 class="name">
-        Song Ming
-      </h1>
-      <br>
-      <br>
-      <br>
-      <h1>
-        A Full Stack Web Developer
-      </h1> -->
-    </app-about>
+    <app-about id="about" class="about" style="cursor: inherit"></app-about>
     <app-skill id="skill" class="skill" style="cursor: inherit"></app-skill>
     <app-work id="work" class="work" [url]="urlWork" style="cursor: inherit"></app-work>
     <!-- <app-auto-complete [formControl]="$any(form.controls['autoCompleteControl'])"
